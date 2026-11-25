@@ -1,0 +1,6 @@
+# dsh-nexus-grid bundle patch.
+# Mounts the Host half (`lib/index.js`) as a normal Loader row; the Browser half
+# (`lib/client.js`) is discovered via `dsh.client` in package.json.
+- insert:
+    - id: dsh-nexus-grid
+      name: 'dsh-nexus-grid'

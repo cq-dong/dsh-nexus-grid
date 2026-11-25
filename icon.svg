@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Nexus Grid">
+  <defs>
+    <linearGradient id="nxBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="52%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="nxAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#nxBg)" stroke="#334155" stroke-width="1.5"/>
+  <!-- Top-left active pane -->
+  <rect x="10" y="10" width="20" height="20" rx="5" fill="url(#nxAccent)" fill-opacity="0.22" stroke="url(#nxAccent)" stroke-width="2.2"/>
+  <circle cx="15.5" cy="15.5" r="2" fill="#2dd4bf"/>
+  <path d="M14 23h12" stroke="#e2e8f0" stroke-width="2" stroke-linecap="round"/>
+  <!-- Top-right pane -->
+  <rect x="34" y="10" width="20" height="20" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.8"/>
+  <circle cx="39.5" cy="15.5" r="2" fill="#f59e0b"/>
+  <path d="M38 23h10" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bottom-left pane -->
+  <rect x="10" y="34" width="20" height="20" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.8"/>
+  <circle cx="15.5" cy="39.5" r="2" fill="#38bdf8"/>
+  <path d="M14 47h9" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Bottom-right pane -->
+  <rect x="34" y="34" width="20" height="20" rx="5" fill="url(#nxAccent)" fill-opacity="0.14" stroke="#38bdf8" stroke-width="1.8"/>
+  <circle cx="39.5" cy="39.5" r="2" fill="#2dd4bf"/>
+  <path d="M38 47h12" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+</svg>

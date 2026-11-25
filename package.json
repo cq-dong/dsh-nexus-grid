@@ -1,0 +1,86 @@
+{
+  "name": "dsh-nexus-grid",
+  "version": "0.1.0",
+  "description": "Active-session auto-grid radar for DeepSeek Harness (DSH): open one page to automatically split the screen across every running session and session awaiting your input, retain finished sessions until dismissed, or manually tile recent sessions from a clean radar standby screen.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "cq-dong",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cq-dong/dsh-nexus-grid.git"
+  },
+  "homepage": "https://github.com/cq-dong/dsh-nexus-grid#readme",
+  "bugs": {
+    "url": "https://github.com/cq-dong/dsh-nexus-grid/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "locale/",
+    "icon.svg",
+    "cordis.patch.yml",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.2-rc.1+": "compatible"
+      }
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "multi-session",
+    "split-screen",
+    "split-view",
+    "session-grid",
+    "active-sessions",
+    "session-radar",
+    "approval-radar",
+    "parallel-sessions",
+    "分屏",
+    "多会话",
+    "同屏对话",
+    "活跃会话",
+    "值守工作台"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check lib/index.js && node --check lib/core.js && node --check lib/client.js && npm test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

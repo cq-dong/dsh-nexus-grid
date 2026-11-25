@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Session radar",
+    "description": "Open Session radar from the sidebar to tile active sessions automatically. Finished panes stay until dismissed. Pick recent sessions when idle. Up to six panes per page."
+  },
+  "panel": {
+    "title": "Multi-Session Grid",
+    "shortTitle": "Nexus Grid"
+  },
+  "action": {
+    "open": "Open Multi-Session Grid",
+    "tileFolder": "Tile Folder",
+    "broadcast": "Broadcast Prompt",
+    "refresh": "Refresh"
+  }
+}
