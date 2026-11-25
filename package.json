@@ -1,6 +1,6 @@
 {
   "name": "dsh-nexus-grid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Active-session auto-grid radar for DeepSeek Harness (DSH): open one page to automatically split the screen across every running session and session awaiting your input, retain finished sessions until dismissed, or manually tile recent sessions from a clean radar standby screen.",
   "type": "module",
   "main": "./lib/index.js",

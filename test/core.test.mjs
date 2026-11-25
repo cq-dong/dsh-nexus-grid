@@ -28,6 +28,12 @@ test('client keeps completed panes and prioritizes initial waiting sessions', as
   runInNewContext(await readFile(new URL('../lib/client.js',import.meta.url),'utf8'), {
     window:{__ModuleLoader__:{load({factory}) { client = factory(() => ({})) }}},
   })
+  assert.equal(client.isNewerTag('v0.1.10', '0.1.9'), true)
+  assert.equal(client.isNewerTag('v0.1.1', '0.1.1'), false)
+  assert.equal(client.isNewerTag('v0.0.99', '0.1.1'), false)
+  assert.equal(client.isNewerTag('v1.0.0-rc.1', '0.1.1'), false)
+  const manifest = JSON.parse(await readFile(new URL('../package.json', import.meta.url), 'utf8'))
+  assert.match(await readFile(new URL('../lib/client.js', import.meta.url), 'utf8'), new RegExp(`installedVersion = '${manifest.version.replaceAll('.', '[.]')}'`))
   const initial = client.reconcileRoster([], [{id:'a',kind:'running'},{id:'b',kind:'waiting'}])
   assert.equal(initial.map(item=>item.id).join(','),'b,a')
   const ended = client.reconcileRoster(initial,[{id:'b',kind:null},{id:'a',kind:'running'},{id:'c',kind:'waiting'}])
